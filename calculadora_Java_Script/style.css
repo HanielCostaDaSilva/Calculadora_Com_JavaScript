@@ -1,0 +1,76 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+ 
+#Calculadora{
+    position: relative;
+    left:50%;
+    height:500px;
+    width:400px;
+    background-color: rgb(6, 6, 19);
+    padding:5%;
+    border-radius: 15%;
+}
+
+#Visor{
+    padding: 5%;
+    border:black 2px solid; 
+    background-color:rgb(19, 73, 51);
+    width:100%;
+    height: 20%;
+    color: beige;
+    text-align: right;
+    font-size: 2rem;
+    flex-direction: row;
+    border-radius: 15%;
+}
+#Botoes-Container{
+    display: grid;
+    grid-template-areas: 'Numero Sinal';
+    width: 100%;
+    height:80%;
+    justify-content: space-evenly;
+    padding: 10px;
+    
+}
+#Botoes-Numeros{
+    display:grid;
+    grid-template-columns:3fr 3fr 3fr;
+    grid-gap: 5px
+}
+.numero{
+    width: 5rem;
+    height:3rem;
+}
+#Botoes-Numeros .sinal{
+    grid-column: 2/4;
+    height:100%
+}
+#Botoes-Sinais{
+    height:100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+#Botoes-Sinais .sinal{
+    height: 3rem;
+    width:5rem;
+}
+.numero, .sinal{
+    font-size: 1.5rem;
+    border:none;
+    border-radius: 5%;
+    background-color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: rgb(28, 28, 51);
+}
+
+.numero:hover, .sinal:hover{
+    background-color: rgb(194, 189, 129);
+    color: rgb(34, 34, 88);
+    cursor: pointer;
+
+}
