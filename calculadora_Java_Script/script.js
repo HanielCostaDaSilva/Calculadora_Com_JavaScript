@@ -7,19 +7,25 @@ function RegistrarOperacao(){
 }
 
 function ExibirResultado(){
+
     const visor = document.getElementById('Resultado');
-    const operadores= []
-    for (i in visor.innerText){
-        if (visor.innerText[i] == '+'){
-          const operadores= visor.innerText.split(visor.innerText[i])  
+    let operadores= 0
+    let sinal=''
+    for (i of visor.innerText){
+        if ('+-/*'.includes(i)){
+            sinal= i
+            operadores= visor.innerText.split(sinal)
+            visor.innerText= Calcular(Number(operadores[0]),sinal,Number(operadores[1]))
+            break
         } 
     }
-    visor.innerText='12'
-    alert(operadores)
-
 }
 
 function Calcular(operador1,sinal, operador2) {
+    for (j in sinais){
+        
+        sinais[j].disabled=true
+    }    
     switch (sinal) {
         case '+':
             return operador1 + operador2;
